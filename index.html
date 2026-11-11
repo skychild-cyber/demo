@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 5, 15, 0.35),
+            rgba(20, 5, 15, 0.45)
+        ),
+        url("images/background2.jpeg");
+
+    /* Fit the entire picture to the laptop screen */
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #160913;
+}
+
+section {
+    padding: 65px 20px;
+    position: relative;
+    background: transparent;
+    z-index: 1;
+}
+
+/* HEADINGS */
+
+h2 {
+    color: #ff91bb;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+/* OPENING SCREEN */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    background: transparent;
+}
+
+.hero h1 {
+    color: #ffb6d5;
+    font-size: clamp(38px, 8vw, 70px);
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+}
+
+.hero p {
+    font-size: 19px;
+    margin: 12px;
+    line-height: 1.7;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff4f91;
+    }
+    to {
+        text-shadow: 0 0 30px #ff8bb8, 0 0 50px #ff4f91;
+    }
+}
+
+/* BUTTONS */
+
+button {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    background: #ff4f91;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 12px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff8bb8;
+    transform: scale(1.07);
+}
+
+/* BIRTHDAY MESSAGE */
+
+.message {
+    max-width: 750px;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.9;
+    color: #ffe4ef;
+}
+
+/* FULL-SCREEN PHOTO AND VIDEO SECTIONS */
+
+.personal-gallery {
+    width: 100%;
+    padding: 35px 0 0;
+    margin: 0;
+    background: transparent;
+}
+
+/* Gallery headings */
+.personal-gallery h2 {
+    padding: 15px 15px 0;
+}
+
+.personal-gallery > p {
+    padding: 0 15px 25px;
+    line-height: 1.7;
+}
+
+/* PHOTO GALLERY */
+#photoGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#photoGallery img {
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 500px;
+    object-fit: cover;
+
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    margin: 10px auto;
+    object-fit: contain;
+    border: 2px solid #ff91bb;
+    border-radius: 18px;
+    box-shadow: 0 0 15px #ff4f9144;
+}
+
+/* VIDEO GALLERY */
+#videoGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#videoGallery video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 500px;
+
+    object-fit: contain;
+    object-position: center;
+    background: rgba(0, 0, 0, 0.65);
+
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* LOVE LETTER */
+
+.letter {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(64, 23, 46, 0.85);
+    border: 1px solid #ff91bb;
+    border-radius: 20px;
+    line-height: 2;
+    font-size: 18px;
+    color: #ffe4ef;
+}
+
+/* BIRTHDAY CAKE */
+
+.cake {
+    font-size: 100px;
+    margin: 20px;
+}
+
+#wishMessage {
+    margin-top: 20px;
+    color: #ffb6d5;
+    font-size: 20px;
+}
+
+/* FINAL MESSAGE */
+
+.hidden {
+    display: none;
+}
+
+#finalMessage {
+    font-size: 28px;
+    color: #ff9ec4;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 22px;
+    animation: float 8s linear infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    background: rgba(48, 13, 35, 0.65);
+    padding: 35px;
+    color: #ffb6d5;
+    position: relative;
+    z-index: 1;
+}
+
+/* MUSIC BUTTON */
+
+#musicButton {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    #photoGallery img {
+        height: 100vh;
+        height: 100svh;
+        min-height: 450px;
+    }
+
+    #videoGallery video {
+        height: 100vh;
+        height: 100svh;
+        min-height: 450px;
+    }
+
+    .letter {
+        margin: 0 12px;
+        padding: 22px;
+        font-size: 16px;
+    }
+
+    #finalMessage {
+        font-size: 23px;
+        padding: 15px;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- OPENING SCREEN -->
+<section class="hero" id="home">
+
+    <h1>Happy Birthday ❤️</h1>
+
+    <p>To the most beautiful girl</p>
+
+    <p>I have prepared something special for you.</p>
+
+    <button onclick="openSurprise()">
+        Open Your Surprise
+    </button>
+
+</section>
+
+<!-- BIRTHDAY MESSAGE -->
+<section id="birthday">
+
+    <h2>Happy Birthday, My Baby</h2>
+
+    <div class="message">
+        Today is not just another day.
+        Today is the day the world was blessed
+        with someone as beautiful and special as you.
+
+        <br><br>
+
+        I wish you endless happiness, beautiful memories,
+        good health, success and everything your heart desires.
+
+        <br><br>
+
+        You deserve all the love and happiness in this world.
+
+        ❤️
+    </div>
+
+</section>
+
+<!-- HER OWN PICTURES -->
+<section class="personal-gallery" id="herPictures">
+
+    <h2>My Cute Baby</h2>
+
+    <p>Every picture reminds me how beautiful you are.</p>
+
+    <div id="photoGallery"></div>
+
+</section>
+
+<!-- HER VIDEOS -->
+<section class="personal-gallery" id="herVideos">
+
+    <h2></h2>
+
+    <p>My favourite person.</p>
+
+    <div id="videoGallery"></div>
+
+</section>
+
+<!-- LOVE LETTER -->
+<section>
+
+    <h2>A Letter From My Heart 💌</h2>
+
+    <div class="letter">
+
+        My Dearest Love,
+
+        <br><br>
+
+        I don't always have the perfect words to explain
+        how much you mean to me.
+
+        Having you in my life is something I will always
+        appreciate. Your smile makes my days brighter,
+        your presence makes life more beautiful,
+        and your love means more than words can explain.
+
+        <br><br>
+
+        On your special day, I want you to remember
+        that you are loved, appreciated and treasured.
+
+        <br><br>
+
+        May this new chapter bring you endless blessings,
+        beautiful opportunities and unforgettable memories.
+
+        <br><br>
+
+        I love you so much.
+
+        <br><br>
+
+        Forever yours ❤️
+
+    </div>
+
+</section>
+
+<!-- BIRTHDAY CAKE -->
+<section>
+
+    <h2>Make A Birthday Wish </h2>
+
+    <div class="cake" id="cake">🎂</div>
+
+    <p>Close your eyes and make a beautiful wish.</p>
+
+    <button onclick="blowCandles()">
+        Blow The Candles 🕯️
+    </button>
+
+    <p id="wishMessage"></p>
+
+</section>
+
+<!-- FINAL SURPRISE -->
+<section>
+
+    <h2>One Last Thing... ❤️</h2>
+
+    <button onclick="showFinalMessage()">
+        Open My Final Message 💝
+    </button>
+
+    <div id="finalMessage" class="hidden">
+
+        You are my favourite person,
+        my happiness and my beautiful blessing.<br>More to come before end of the day
+
+        <br><br>
+
+        Happy Birthday, My Love! ❤️
+
+        <br><br>
+
+        I hope I get to celebrate
+        many more birthdays with you.
+
+        <br><br>
+
+        I LOVE YOU! 💋<br> JAMES 4: 17 KJV<br>BUT THE FRUIT OF THE SPIRIT IS LOVE, JOY,<br>PEACE, LONGSUFFERING, GENTLENESS,<br>GOODNESS, FAITH
+
+    </div>
+
+</section>
+
+<footer>
+    Made with endless love ❤️
+    <br>
+    Especially for you.
+</footer>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="music" loop>
+    <source src="music1.mp4" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+    🎵 Play Music
+</button>
+
+<script>
+
+// OPEN THE SURPRISE
+function openSurprise() {
+
+    document.getElementById("birthday")
+    .scrollIntoView({behavior: "smooth"});
+
+    const music = document.getElementById("music");
+
+    music.play().then(() => {
+        document.getElementById("musicButton").innerText =
+        "⏸ Pause Music";
+    }).catch(() => {
+        console.log("Use the music button to start music.");
+    });
+
+}
+
+// MUSIC CONTROL
+function toggleMusic() {
+
+    const music = document.getElementById("music");
+    const button = document.getElementById("musicButton");
+
+    if (music.paused) {
+
+        music.play().then(() => {
+            button.innerText = "⏸ Pause Music";
+        }).catch(() => {
+            button.innerText = "🎵 Play Music";
+        });
+
+    } else {
+
+        music.pause();
+        button.innerText = "🎵 Play Music";
+
+    }
+}
+
+// FLOATING HEARTS
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML = ["❤️", "💕", "💖", "💗", "🌹"][
+        Math.floor(Math.random() * 5)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+}
+
+setInterval(createHeart, 500);
+
+
+// HER PICTURES
+// Put all pictures inside the images folder.
+
+const herPictures = [
+    "images/photo1.jpeg",
+    "images/photo2.jpeg",
+    "images/photo3.jpeg",
+    "images/photo4.jpeg",
+    "images/photo5.jpeg",
+    "images/photo6.jpeg",
+    "images/photo7.jpeg",
+    "images/photo8.jpeg"
+];
+
+const photoGallery = document.getElementById("photoGallery");
+
+herPictures.forEach((photo, index) => {
+
+    const image = document.createElement("img");
+
+    image.src = photo;
+    image.alt = "My beautiful queen - Photo " + (index + 1);
+    image.loading = index === 0 ? "eager" : "lazy";
+
+    image.onerror = function() {
+        console.error("Could not load picture: " + photo);
+    };
+
+    photoGallery.appendChild(image);
+
+});
+
+
+// HER VIDEOS
+// Put all videos inside the videos folder.
+
+const herVideos = [
+    "videos/video1.mp4",
+    "videos/video2.mp4",
+    "videos/video3.mp4",
+    "videos/video4.mp4",
+    "videos/video5.mp4"
+];
+
+const videoGallery = document.getElementById("videoGallery");
+
+herVideos.forEach((video, index) => {
+
+    const player = document.createElement("video");
+
+    player.src = video;
+    player.controls = true;
+    player.playsInline = true;
+    player.preload = "auto";
+
+    player.autoplay = true;
+    player.muted =true;
+
+    player.setAttribute(
+        "aria-label",
+        "Her special video " + (index + 1)
+    );
+
+    player.onerror = function() {
+        console.error("Could not load video: " + video);
+    };
+
+    videoGallery.appendChild(player);
+
+});
+
+
+// BIRTHDAY CAKE
+function blowCandles() {
+
+    document.getElementById("cake").innerHTML = "🎂✨";
+
+    document.getElementById("wishMessage").innerHTML =
+    "May all your dreams come true, my love! ❤️";
+
+    celebrate();
+
+}
+
+
+// FINAL MESSAGE
+function showFinalMessage() {
+
+    document.getElementById("finalMessage")
+    .classList.remove("hidden");
+
+    celebrate();
+
+}
+
+
+// CONFETTI
+function celebrate() {
+
+    const emojis = ["🎉", "💖", "❤️", "✨", "🌹", "💕"];
+
+    for (let i = 0; i < 50; i++) {
+
+        const item = document.createElement("div");
+
+        item.innerHTML = emojis[
+            Math.floor(Math.random() * emojis.length)
+        ];
+
+        item.style.position = "fixed";
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.top = "-30px";
+        item.style.fontSize = "25px";
+        item.style.zIndex = "20";
+        item.style.pointerEvents = "none";
+
+        document.body.appendChild(item);
+
+        const duration = 2000 + Math.random() * 3000;
+
+        item.animate([
+            {
+                transform: "translateY(0) rotate(0deg)",
+                opacity: 1
+            },
+            {
+                transform: `translateY(${window.innerHeight + 100}px) rotate(720deg)`,
+                opacity: 0
+            }
+        ], {
+            duration: duration,
+            easing: "ease-in"
+        });
+
+        setTimeout(() => item.remove(), duration);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
